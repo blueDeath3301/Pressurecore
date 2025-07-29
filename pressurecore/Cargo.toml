@@ -1,0 +1,18 @@
+[package]
+name = "pressurecore"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bitflags = "2.9.0"
+obfstr = "0.4.4"
+
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+opt-level = "s"
+lto = true
+codegen-units = 1
